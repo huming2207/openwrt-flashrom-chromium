@@ -1,0 +1,33 @@
+--- a/linux_spi.c
++++ b/linux_spi.c
+@@ -20,7 +20,7 @@
+ #include <stdio.h>
+ #include <string.h>
+ #include <stdlib.h>
+-#include <sys/fcntl.h>
++#include <fcntl.h>
+ #include <errno.h>
+ #include <ctype.h>
+ #include <unistd.h>
+--- a/file.c
++++ b/file.c
+@@ -41,7 +41,7 @@
+ #include <string.h>
+ #include <unistd.h>
+ #include <arpa/inet.h>
+-#include <sys/fcntl.h>
++#include <fcntl.h>
+ #include <sys/stat.h>
+ #include <sys/types.h>
+ 
+--- a/linux_i2c.c
++++ b/linux_i2c.c
+@@ -33,7 +33,7 @@
+ #include <stdio.h>
+ #include <stdlib.h>
+ #include <string.h>
+-#include <sys/fcntl.h>
++#include <fcntl.h>
+ #include <sys/ioctl.h>
+ #include <unistd.h>
+ 

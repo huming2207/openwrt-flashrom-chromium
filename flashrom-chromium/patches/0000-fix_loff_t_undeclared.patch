@@ -1,0 +1,43 @@
+--- a/fmap.c
++++ b/fmap.c
+@@ -43,7 +43,7 @@
+ #include "fmap.h"
+ #include "search.h"
+ 
+-int fmap_find(struct flashctx *flash, struct fmap *fmap, loff_t offset,
++int fmap_find(struct flashctx *flash, struct fmap *fmap, off_t offset,
+ 	      uint8_t **buf)
+ {
+ 	int fmap_size;
+--- a/fmap.h
++++ b/fmap.h
+@@ -89,7 +89,7 @@ struct search_info;
+  *
+  * returns 1 if found, 0 if not found, <0 to indicate failure
+  */
+-int fmap_find(struct flashctx *flash, struct fmap *fmap, loff_t offset,
++int fmap_find(struct flashctx *flash, struct fmap *fmap, off_t offset,
+ 	      uint8_t **buf);
+ 
+ /* Like fmap_find, but give a memory location to search FMAP. */
+--- a/fdtmap.c
++++ b/fdtmap.c
+@@ -217,7 +217,7 @@ int fdtmap_add_entries_from_buf(const vo
+ 	return count;
+ }
+ 
+-int fdtmap_find(struct flashctx *flash, struct fdtmap_hdr *hdr, loff_t offset,
++int fdtmap_find(struct flashctx *flash, struct fdtmap_hdr *hdr, off_t offset,
+ 		uint8_t **buf)
+ {
+ 	int fmap_size;
+--- a/fdtmap.h
++++ b/fdtmap.h
+@@ -72,6 +72,6 @@ int fdtmap_add_entries_from_buf(const vo
+  * returns 1 if found, 0 if not found, <0 to indicate failure
+  */
+ int fdtmap_find(struct flashctx *flash, struct fdtmap_hdr *hdr,
+-		loff_t offset, uint8_t **buf);
++		off_t offset, uint8_t **buf);
+ 
+ #endif

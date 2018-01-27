@@ -10,7 +10,7 @@ include $(TOPDIR)/rules.mk
 PKG_NAME:=flashrom-chromium
 
 PKG_SOURCE_PROTO:=git
-PKG_SOURCE_VERSION:=a7cad69099e5d88ba4aeaffad6aa5225af522c77
+PKG_SOURCE_VERSION:=90f1b27bf2bc02e692b00374e61c0a572b309e4c
 PKG_SOURCE_URL:=https://github.com/huming2207/flashrom_google.git
 PKG_SOURCE_SUBDIR:=$(PKG_NAME)-$(PKG_SOURCE_VERSION)
 PKG_MAINTAINER:=Ming Hu <huming@xcloud.cc>
